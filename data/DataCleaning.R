@@ -1,4 +1,3 @@
-
 library(rstudioapi)
 library(dplyr)
 library(readr)
@@ -22,13 +21,5 @@ catData <- catData[,-c(2,3,7)] #idc about this stuff for now
 catData <- catData[!is.na(catData$name),] #remove empty rows
 ########################################
 
-head(catData)
-
-
-barplot(table(catData$clan))
-
-
 #update CatData.csv
-write.csv(catData, file="cleaned/CatData.csv",row.names = F)
-
-
+write.csv(catData, file = "cleaned/CatData.csv",row.names = FALSE)
