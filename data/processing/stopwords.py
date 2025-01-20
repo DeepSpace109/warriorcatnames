@@ -1,8 +1,5 @@
 from pathlib import Path
 import csv
-import nltk
-nltk.download('stopwords')
-nltk.download('punkt')
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
@@ -17,4 +14,3 @@ stop_words.add('she-cat')
 
 testsen = data[-1][-1]
 print([w for w in word_tokenize(testsen) if not w.lower() in stop_words])
-
