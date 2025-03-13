@@ -23,3 +23,5 @@ catData <- catData[!is.na(catData$name),] #remove empty rows
 
 #update CatData.csv
 write.csv(catData, file = "cleaned/CatData.csv",row.names = FALSE)
+write.csv(catData$name, file = "cleaned/CatNames.csv",row.names= FALSE)
+

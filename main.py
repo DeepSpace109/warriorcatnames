@@ -5,12 +5,12 @@ from pathlib import Path
 def main():
     path = os.getcwd() + "/data/DataCleaning.R"
     print(path)
-    try:
+    
+    #Scrape Spreadsheets into basic data.
+    #TODO Control DataCleaning.R from this python file
 
-        subprocess.call(['Rscript',path], shell=False)
-        print("cash money")
-    except subprocess.CalledProcessError as e:
-        print("bruh")
+
+
 
 if __name__ == "__main__":
     main()
