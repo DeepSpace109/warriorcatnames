@@ -1,6 +1,5 @@
 from pathlib import Path
 import csv
-import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
@@ -20,8 +19,10 @@ for names in set([row[1] for row in data]):
 for rows in data:
     rows[-1] = [w for w in word_tokenize(rows[-1]) if not w.lower() in stop_words]
 
-print(rows)
+for each in data:
+    if "Description" in each[-1]:
+        each[-1].remove("Description")
 
 with open(writePath,mode= "w") as f:
     for row in data:
-        f.write(f"{row[0]}, {row[1]}, {row[2]}, {', '.join(row[3])} \n")
+        f.write(f"{' '.join(row[3])}\n")
