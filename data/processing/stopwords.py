@@ -26,3 +26,4 @@ for each in data:
 with open(writePath,mode= "w") as f:
     for row in data:
         f.write(f"{' '.join(row[3])}\n")
+        #TODO replace "-" with " " to get rid of those stupid "black-and-white" descriptors
